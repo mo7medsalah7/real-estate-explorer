@@ -41,6 +41,7 @@ const Search = ({ properties }) => {
 						className="object-cover"
 						width="200px "
 						height="200px"
+						alt={"no result"}
 					/>
 
 					<p className="text-lg">No Result Found</p>

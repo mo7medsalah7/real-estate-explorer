@@ -22,7 +22,7 @@ export default function Home({ propertiesForRent, propertiesForSale }) {
 				<div className="container mx-auto shadow-lg shadow-grey-400">
 					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 						{propertiesForRent.map((property) => (
-							<Property property={property} />
+							<Property key={property} property={property} />
 						))}
 					</div>
 				</div>
@@ -39,7 +39,7 @@ export default function Home({ propertiesForRent, propertiesForSale }) {
 				<div className="container mx-auto shadow-lg shadow-grey-400">
 					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 						{propertiesForSale.map((property) => (
-							<Property property={property} />
+							<Property key={property} property={property} />
 						))}
 					</div>
 				</div>

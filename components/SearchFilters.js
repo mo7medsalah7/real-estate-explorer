@@ -32,8 +32,8 @@ const SearchFilters = () => {
 		<div className="sm:container mx-auto  mt-4 grid grid-cols-1 md:grid-cols-3 xl:grid-cols-4 gap-2">
 			{filters.map((filter) => {
 				return (
-					<div className="flex flex-col">
-						<label className="text-sm" for={filter.placeholder}>
+					<div className="flex flex-col" key={filter.queryName}>
+						<label className="text-sm" htmlFor={filter.placeholder}>
 							{filter.placeholder}
 						</label>
 

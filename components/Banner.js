@@ -21,7 +21,7 @@ function Banner({
 				<h3 className="">{title2}</h3>
 				<p className="capitalize text-gray-700 mb-4">{description}</p>
 				<button className="bg-sky-500 text-white shadow-md rounded-md px-10 py-4 w-full m-auto text-lg hover:shadow-lg">
-					<Link href={linkName}>
+					<Link href={linkName} passHref>
 						<p>{buttonText}</p>
 					</Link>
 				</button>

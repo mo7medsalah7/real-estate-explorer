@@ -33,10 +33,12 @@ const PropertyDetails = ({
 					{photos.slice(1, 7).map((photo) => {
 						return (
 							<Image
+								key={photo.id}
 								src={photo.url}
 								width="300px"
 								height="300px"
 								layout="intrinsic"
+								alt={photo.id}
 							/>
 						);
 					})}

@@ -44,6 +44,7 @@ const Property = ({
 							height="50px"
 							layout="intrinsic"
 							className="object-fit"
+							alt={title}
 						/>
 					</div>
 				</div>
