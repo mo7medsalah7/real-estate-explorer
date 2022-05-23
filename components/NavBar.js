@@ -1,6 +1,6 @@
 import React from "react";
 import { Transition } from "@headlessui/react";
-import { Link } from "next/link";
+import Link from "next/link";
 
 function NavBar() {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -11,36 +11,36 @@ function NavBar() {
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center">
               <div className="flex-shrink-0">
-                <a href="/">
+                <Link href="/">
                   <img
-                    className="h-8 w-8"
+                    className="h-8 w-8 cursor-pointer"
                     src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
                     alt="Workflow"
                   />
-                </a>
+                </Link>
               </div>
               <div className="hidden md:block">
                 <div className="ml-10 flex items-baseline space-x-4">
-                  <a
-                    href="/"
-                    className=" hover:bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium"
-                  >
-                    Real-Estate
-                  </a>
+                  <Link href="/">
+                    <p className=" hover:bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium">
+                      Real-Estate
+                    </p>
+                  </Link>
 
-                  <a
-                    href="/search?purpose=for-sale"
-                    className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                  >
-                    Sale
-                  </a>
+                  <Link href={"/search?purpose=for-sale"}>
+                    <a className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                      Sale
+                    </a>
+                  </Link>
 
-                  <a
-                    href="/search?purpose=for-rent"
-                    className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                  >
-                    Rent
-                  </a>
+                  <Link href={"/search?purpose=for-rent"}>
+                    <a
+                      className="text-gray-300 hover:bg-gray-700 hover:text-white
+                    px-3 py-2 rounded-md text-sm font-medium"
+                    >
+                      Rent
+                    </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -103,26 +103,22 @@ function NavBar() {
           {(ref) => (
             <div className="md:hidden" id="mobile-menu">
               <div ref={ref} className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a
-                  href="/"
-                  className="hover:bg-gray-700 text-white block px-3 py-2 rounded-md text-base font-medium"
-                >
-                  Real-Estate
-                </a>
+                <Link href="/">
+                  <a className="hover:bg-gray-700 text-white block px-3 py-2 rounded-md text-base font-medium">
+                    Real-Estate
+                  </a>
+                </Link>
 
-                <a
-                  href="/search?purpose=for-sale"
-                  className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-                >
-                  Sale
-                </a>
-
-                <a
-                  href="/search?purpose=for-rent"
-                  className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-                >
-                  Rent
-                </a>
+                <Link href={"/search?purpose=for-sale"}>
+                  <a className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+                    Sale
+                  </a>
+                </Link>
+                <Link href={"/search?purpose=for-rent"}>
+                  <a className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+                    Rent
+                  </a>
+                </Link>
               </div>
             </div>
           )}
