@@ -10,6 +10,17 @@ export default function Home({ propertiesForRent, propertiesForSale }) {
       <Head>
         <title>Your Real-Estate</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta name="og:type" property="og:type" content="website" />
+        <meta
+          name="og:description"
+          property="og:description"
+          content="Mohamed Salah Portofolio, A Frontend Developer and DevOps Engineer"
+        />
+        <meta
+          name="og:image"
+          property="og:image"
+          content="https://res.cloudinary.com/dexrp1zlw/image/upload/v1653409172/my-portofolio/image-seo.png"
+        />
       </Head>
       <main>
         <div className="flex flex-col sm:gap-20 md:gap-30 gap-40">

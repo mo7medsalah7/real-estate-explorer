@@ -17,7 +17,7 @@ const Search = ({ properties }) => {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <div
-        className="capitalize w-full  bg-gray-300 cursor-pointer"
+        className="capitalize w-full p-5 bg-gray-300 cursor-pointer"
         onClick={() => setSearchFilters((prevFilter) => !prevFilter)}
       >
         search property by filters
